@@ -262,7 +262,7 @@ If ($Task -eq 'Processing')
                             {
                                 $vmnsg = 'None'
                             }
-                        if(![string]::IsNullOrEmpty($vmnic.properties.enableAcceleratedNetworking) -or $vmnic.properties.enableAcceleratedNetworking -eq $true)
+                        if($vmnic.properties.enableAcceleratedNetworking -eq $true)
                             {
                                 $AcceleratedNetwork = $true
                             }
